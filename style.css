@@ -1,0 +1,124 @@
+/* style.css - colors and spacing */
+:root{
+  --primary-turquoise: #3d20b2;
+  --accent-orange: #7197cf;
+  --muted-bg: #4fced7;
+  --card-bg: #5483a4;
+}
+
+body {
+  background: var(--muted-bg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #842078;
+}
+
+/* Card / step container */
+.card {
+  background: var(--card-bg);
+}
+
+/* Step title */
+.step-title {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--accent-orange);
+  color: #ca6d84;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* theme card */
+.theme-card {
+  border: 1px solid #e6e9ec;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+  background: #fff;
+}
+.theme-card:focus,
+.theme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(24,43,64,0.08);
+  border-color: rgba(32,178,170,0.35);
+}
+.theme-img{
+  height: 180px;
+  object-fit: cover;
+}
+
+/* step indicator pills */
+.step-pill {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items:center;
+  justify-content:center;
+  border-radius: 50%;
+  background: #e9eef6;
+  color: #334;
+  font-weight:600;
+  margin-right:6px;
+}
+.step-pill.active {
+  background: var(--primary-turquoise);
+  color:#fff;
+}
+
+/* Pricing panel scroll container */
+.pricing-panel {
+  background:#fff;
+  border-radius:8px;
+  padding:16px;
+  border:1px solid #e9e9ee;
+  margin-bottom: 8px;
+}
+.preview-panel .preview-scroll{
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.preview-panel .preview-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.preview-panel .preview-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(#d0d8d8,#b7c6c6);
+  border-radius: 6px;
+}
+
+/* Form controls */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dcdfe4;
+}
+.form-control:focus {
+  box-shadow: 0 0 6px rgba(32,178,170,0.15);
+  border-color: var(--primary-turquoise);
+}
+
+/* buttons */
+.btn-primary {
+  background: var(--primary-turquoise);
+  border-color: var(--primary-turquoise);
+}
+.btn-primary:hover { background: #188f89; border-color:#188f89; }
+
+.btn-secondary {
+  background: #f0ad4e;
+  border-color: #f0ad4e;
+  color: #fff;
+}
+.btn-secondary:hover { background:#ec971f; border-color:#ec971f; }
+
+/* footer */
+footer {
+  background: #0b0b0b;
+  color: #fff;
+  margin-top: 24px;
+}
+
+/* responsive tweaks */
+@media (max-width: 767px){
+  .theme-img { height: 140px; }
+  .preview-panel .preview-scroll { max-height: 220px; }
+}
